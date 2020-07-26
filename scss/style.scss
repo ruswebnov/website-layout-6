@@ -3,6 +3,10 @@
 @import "mixins";
 @import "variables";
 @import "header";
+@import "trigger";
+@import "product";
+@import "result";
+@import "regular";
 
 
 
@@ -31,11 +35,9 @@ h1,h2,h3,h4,h5,h6{
   font-family: inherit;
   font-size: inherit;
 }
-html{
-  scroll-behavior: smooth;
-}
+
 body{
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: 'OpenSans-Regular', sans-serif;
   font-size: 16px;
   line-height: 19px;

@@ -1,0 +1,69 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+.regular{
+  @include paddingSections;
+  .holder__box{
+    margin-bottom: 100px;
+  }
+  .holder__box-title{
+    @include standartText($fontFm: 'OpenSans-Bold', $fs: 16px, $lh: 22px, $clr:$whiteText);
+  }
+  .holder__title{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .holder__subtitle{
+    text-align: center;
+    margin-bottom: 120px;
+  }
+}
+.regular__inner{
+  position: relative;
+  text-align: center;
+}
+.regular__item{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 235px;
+  height: 120px;
+  border-radius: 70px;
+  padding: 10px 20px;
+  box-shadow: $boxShadow;
+  z-index: 5;
+}
+.regular__item-text{
+  @include smallText($fontFm:'OpenSans-Bold',$clr:$titleColor);
+}
+.regular-img{
+  max-width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.item--1{
+  top: 30%;
+  left: 3%;
+}
+.item--2{
+  top: 2%;
+  left: 13%;
+}
+.item--3{
+  left: 45%;
+  top: -9%;
+}
+.item--4{
+  top: 55%;
+  right: 0%;
+}
+.item--5{
+  top: 77%;
+  right: 10%;
+}
+.item--6{
+  top: 90%;
+  right: 40%;
+}

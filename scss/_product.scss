@@ -1,0 +1,91 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+.product {
+  @include paddingSections;
+  position: relative;
+}
+.holder__box {
+  text-align: right;
+  width: 100%;
+  margin-right: auto;
+  margin-left: 50%;
+  padding: 15px 150px 15px 90px;
+  border-radius: 60px;
+  background-color: $redText;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 50px;
+    background-image: url(../images/product/simbol.png);
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+}
+.holder__box-title {
+  @include middleText;
+  text-transform: capitalize;
+  max-width: 450px;
+  width: 100%;
+}
+.product__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.product__item-title {
+  text-align: right;
+  margin:100px 0 10px 0;
+  @include holderTitle($fontFm: 'OpenSans-Bold', $fs: 36px, $lh: 44px, $clr:$darkText);
+  span{
+    color: $redText;
+  }
+}
+.product__item-subtitle {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: right;
+}
+.product__item-list {
+  text-align: right;
+  max-width: 300px;
+  width: 100%;
+  
+  margin-bottom: 40px;
+
+}
+.product__item-item {
+  padding-left: 90px;
+  @include middleText($clr:$darkText);
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #EAD5F1;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $redText;
+  }
+}
+.product__items-text {
+  @include smallText($clr:$darkText);
+  margin: 0 0 40px;
+}

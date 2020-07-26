@@ -1,0 +1,63 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+
+.trigger {
+  padding: 300px 0 50px 0;
+}
+.holder__title {
+  @include holderTitle;
+  margin-bottom: 50px;
+  span{
+    color: $redText;
+  }
+}
+.trigger__inner,
+.result__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.trigger__item {
+  &:first-child{
+    max-width: 470px;
+    width: 100%;
+  }
+}
+.trigger__item-preview,
+.result__item__preview {
+  margin-bottom: 30px;
+}
+.trigger__item-list,
+.result__item-list {
+  margin-bottom: 30px;
+}
+.trigger__item-items,
+.result__item-items {
+  @include standartText;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 30px;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    background-color: $redText;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+.trigger__item-box {
+  max-width: 530px;
+  height: 400px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: $boxShadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

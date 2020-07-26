@@ -18,26 +18,26 @@
 
  //Миксины для текста 
 @mixin smallText($fontFm: 'OpenSans-Regular', $fs: 14px, $lh: 18px, $clr:$whiteText) {
-  font-family: $fontFm;
+  font-family: $fontFm,sans-serif;
   font-size: $fs;
   line-height: $lh;
   color: $clr;
 }
-@mixin standartText($fontFm: 'OpenSans-Bold', $fs: 16px, $lh: 19px, $clr:$darkText) {
-  font-family: $fontFm;
+@mixin standartText($fontFm: 'OpenSans-Bold', $fs: 16px, $lh: 22px, $clr:$darkText) {
+  font-family: $fontFm,sans-serif;
   font-size: $fs;
   line-height: $lh;
   color: $clr;
 }
 @mixin middleText($fontFm: 'OpenSans-Bold', $fs: 24px, $lh: 34px, $clr:$whiteText) {
-  font-family: $fontFm;
+  font-family: $fontFm,sans-serif;
   font-size: $fs;
   line-height: $lh;
   color: $clr;
 }
 
 @mixin holderTitle($fontFm: 'Pridi-Bold', $fs: 36px, $lh: 44px, $clr:$titleColor) {
-  font-family: $fontFm;
+  font-family: $fontFm,sans-serif;
   font-size: $fs;
   line-height: $lh;
   color: $clr;
@@ -57,7 +57,7 @@
   text-transform: uppercase;
   transition: 0.3s;
   &:hover{
-    background: linear-gradient(101.25deg, #ca00338e 10.92%, #4e47778c 92.35%), #c4c4c498;
+    background: linear-gradient(101.25deg, #e42857 10.92%, #4135868c 92.35%), #e0e0e0;
   }
 }
 
@@ -73,4 +73,10 @@
   &:hover{
     background: rgba(169, 169, 169, 0.8);
   }
+}
+
+
+//padding
+@mixin paddingSections($pdd: 50px 0) {
+  padding: $pdd;
 }
