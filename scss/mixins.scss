@@ -1,0 +1,76 @@
+//для импорта шрифтов
+@import "variables";
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+  font-family: $font_name;
+  font-display: swap;
+  src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+  font-weight: #{$weight};
+  font-style: #{$style};
+  }
+}
+
+
+
+
+//миксины для работы 
+
+ //Миксины для текста 
+@mixin smallText($fontFm: 'OpenSans-Regular', $fs: 14px, $lh: 18px, $clr:$whiteText) {
+  font-family: $fontFm;
+  font-size: $fs;
+  line-height: $lh;
+  color: $clr;
+}
+@mixin standartText($fontFm: 'OpenSans-Bold', $fs: 16px, $lh: 19px, $clr:$darkText) {
+  font-family: $fontFm;
+  font-size: $fs;
+  line-height: $lh;
+  color: $clr;
+}
+@mixin middleText($fontFm: 'OpenSans-Bold', $fs: 24px, $lh: 34px, $clr:$whiteText) {
+  font-family: $fontFm;
+  font-size: $fs;
+  line-height: $lh;
+  color: $clr;
+}
+
+@mixin holderTitle($fontFm: 'Pridi-Bold', $fs: 36px, $lh: 44px, $clr:$titleColor) {
+  font-family: $fontFm;
+  font-size: $fs;
+  line-height: $lh;
+  color: $clr;
+}
+
+
+
+//Кнопки
+@mixin button($pdd:30px 80px, $bradius: 30px, $clr: $whiteText, $fontFm: 'OpenSans-Bold', $fs: 14px) {
+  padding: $pdd;
+  background: linear-gradient(101.25deg, #CE0538 10.92%, #4E4777 92.35%), #C4C4C4;
+  border-radius: $bradius;
+  box-shadow:0px 4px 30px rgba(80, 171, 255, 0.5);
+  color: $clr;
+  font-family: $fontFm;
+  font-size: $fs;
+  text-transform: uppercase;
+  transition: 0.3s;
+  &:hover{
+    background: linear-gradient(101.25deg, #ca00338e 10.92%, #4e47778c 92.35%), #c4c4c498;
+  }
+}
+
+@mixin buttonCall($pdd:15px 20px, $br: 2px solid $redText, $bradius: 30px, $clr: $redText, $fontFm: 'OpenSans-SemiBold', $fs: 16px) {
+  padding: $pdd;
+  background: rgba(169, 169, 169, 0.4);
+  border: $br;
+  border-radius: $bradius;
+  color: $clr;
+  font-family: $fontFm;
+  font-size: $fs;
+  transition: 0.3s;
+  &:hover{
+    background: rgba(169, 169, 169, 0.8);
+  }
+}

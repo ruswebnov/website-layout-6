@@ -1,0 +1,26 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+.header {
+}
+
+.header__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.header__head-item {
+}
+.head-item__phone {
+  @include middleText;
+  color: $redText;
+  margin-right: 20px;
+  &:hover{
+    color: $redAccent;
+  }
+}
+.head-item__btn {
+  @include buttonCall;
+}
