@@ -1,0 +1,26 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+.certificates {
+  @include paddingSections;
+}
+.container {
+}
+
+.certificates__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.certificates__item {
+  flex: 0 0 30%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  img{
+    margin-right: 10px;
+  }
+}
+.certificates__item-text {
+}

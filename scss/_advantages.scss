@@ -1,0 +1,57 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+
+.advantages {
+  position: relative;
+  padding: 200px 0;
+  .holder__item-list{
+    max-width: 500px;
+    text-align: left;
+  }
+  .holder__item-item {
+    @include standartText($fontFm:'OpenSans-SemiBold', $fs: 18px);
+    margin-bottom: 40px;
+    &::after{
+      left: 1.5%;
+    }
+  }
+  .holder__inner-box {
+    width: 51%;
+    margin: 30px 0 100px auto;
+  }
+}
+.advantages{
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    background-image: url(../images/advantages/vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__text {
+  margin-bottom: 60px;
+  line-height: 22px;
+}
+
+.advantages__item-text {
+  @include middleText($clr:$redText);
+  max-width: 320px;
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+  margin: -65px 0 20px auto;
+}

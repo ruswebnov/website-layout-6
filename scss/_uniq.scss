@@ -1,0 +1,104 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+.uniq_vector-top{
+  position: absolute;
+  height: 500px;
+  top: -20%;
+  z-index: -2;
+  width: 100%;
+  background: rgb(25, 25, 25);;
+}
+.uniq {
+  position: relative;
+  margin-bottom: 250px;
+  background: rgb(25, 25, 25);
+  color: $whiteText;
+  .holder__title {
+    @include holderTitle($fontFm: 'OpenSans-Bold', $clr:$whiteText)
+  }
+  .container{
+    position: relative;
+  }
+}
+.uniq__inner {
+  max-width: 480px;
+  padding-top: 50px;
+}
+.uniq__text {
+  line-height: 22px;
+  margin-bottom: 60px;
+}
+.uniq__box {
+  @include standartText($clr:$whiteText);
+  padding: 20px 10px;
+  border-radius: 15px;
+  background: $redText;
+  width: 430px;
+  margin-bottom: 100px;
+}
+.uniq__arm{
+  position: absolute;
+  right: 0;
+  width: 50%;
+  top: -5%;
+}
+.uniq__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.uniq__title{
+  @include holderTitle($fontFm: 'OpenSans-Bold', $clr:$whiteText);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.uniq__item {
+  text-align: center;
+  margin-bottom: 60px;
+  flex: 0 0 20%;
+  max-width: 200px;
+  img{
+    max-width: 220px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+}
+.uniq__item-title {
+  min-height: 30px;
+  @include smallText($fontFm: 'OpenSans-Bold');
+  margin-bottom: 30px;
+}
+.uniq__item-text {
+  @include smallText;
+}
+
+.uniq__bottom-vector{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 130%;
+z-index: -6;
+}
+.uniq__use {
+  position: absolute;
+  right: 0;
+  z-index: 15;
+  max-width: 50%;
+  text-align: right;
+}
+.uniq__use-btn {
+  @include button($pdd:20px 40px);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.uniq__use-titlle {
+ @include middleText;
+ margin-bottom: 30px;
+}
+.uniq__use-text {
+  line-height: 22px;
+}

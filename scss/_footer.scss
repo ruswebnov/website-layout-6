@@ -1,0 +1,43 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+.footer {
+  padding-top: 50px;
+  .header__product{
+    top: 45%;
+    width: 25%;
+    left: 20%;
+}
+}
+.footer{
+  .header {
+    padding-top: 370px;
+    position: relative;
+    background-image: url(../images/footer/backgr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    &::before{
+      content: none;
+    }
+    &::after{
+      content: none;
+  }
+}
+.header__content{
+  margin-bottom: 40px;
+}
+.header__head{
+  margin-bottom: 40px;
+}
+}
+.footer__copyright {
+  @include smallText($fs: 12px,  $clr:$copyrightText);
+  text-align: center;
+}
+.footer__inn {
+  @include smallText($fs: 12px, $clr:$copyrightText);
+  text-align: center;
+}

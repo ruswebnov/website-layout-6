@@ -1,0 +1,37 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+
+
+.reviews {
+  @include paddingSections;
+  .holder__title {
+    margin-bottom: 50px;
+  }
+}
+
+
+.reviews__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.reviews__item {
+  max-width: 530px;
+  margin: 20px 35px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: $boxShadow;
+  text-align: center;
+  img{
+    margin-bottom: 20px;
+  }
+}
+.reviews__item-name {
+  @include middleText($clr:$darkText);
+  margin-bottom: 40px;
+}
+.reviews__item-text {
+  line-height: 22px;
+  padding: 0 10px;
+}
