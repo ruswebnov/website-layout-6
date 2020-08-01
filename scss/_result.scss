@@ -3,40 +3,47 @@
 @import "mixins";
 
 
-.result{
+.result {
   @include paddingSections;
 }
-.result__inner{
+
+.result__inner {
   margin-bottom: 80px;
 }
+
 .result__item {
-  &:first-child{
+  &:first-child {
     max-width: 400px;
     width: 100%;
   }
 }
-.result__item-box{
+
+.result__item-box {
   position: relative;
 }
-.result__box-span{
+
+.result__box-span {
   display: inline-block;
   @include smallText($fontFm: 'OpenSans-Bold', $fs: 14px, $lh: 18px, $clr:$titleColor);
   position: absolute;
   top: 70%;
   transform: translateY(-50%);
   z-index: 1;
-  &:nth-child(1){
+
+  &:nth-child(1) {
     left: 10%;
   }
-  &:nth-child(3){
+
+  &:nth-child(3) {
     right: 10%;
   }
-  &::before{
+
+  &::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -45,11 +52,13 @@
     z-index: -1;
   }
 }
-.result__circle{
+
+.result__circle {
   display: flex;
   justify-content: space-between;
 }
-.result__circle-item{
+
+.result__circle-item {
   @include standartText($clr:$titleColor);
   display: flex;
   justify-content: center;
@@ -61,8 +70,86 @@
   border-radius: 50%;
   background: #fff;
   box-shadow: $boxShadow;
-  &:nth-child(odd){
+
+  &:nth-child(odd) {
     margin-top: 30px;
   }
 }
 
+
+
+//======================== media queries ========================
+@media(max-width: 992px) {
+  .result__inner {
+    flex-direction: column;
+  }
+
+  .holder__title,
+  .result__item__preview {
+    text-align: center;
+  }
+
+  .result__item {
+    margin: 0 auto;
+
+    &:first-child {
+      max-width: 100%;
+    }
+  }
+
+  .result__item-items {
+    margin: 0 auto;
+    max-width: 350px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+@media(max-width: 768px) {
+  .result {
+    padding-bottom: 20px;
+  }
+
+  .result__box-img {
+    width: 500px;
+  }
+
+  .result__inner {
+    margin-bottom: 30px;
+  }
+
+  .result__circle {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .result__circle-item {
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
+    margin: 0 20px;
+  }
+}
+
+
+
+@media(max-width: 544px) {
+  .result__box-img {
+    width: 280px;
+  }
+
+  .result__box-span {
+    font-size: 12px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .result__circle-item {
+    margin: 0 5px;
+  }
+}

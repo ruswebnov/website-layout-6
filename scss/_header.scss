@@ -146,3 +146,140 @@
   @include smallText($fontFm: 'OpenSans-Regular', $fs: 12px, $lh: 18px, $clr:$darkText);
   text-align: left;
 }
+
+
+
+
+//======================== media queries ========================
+@media(max-width: 992px) {
+  .header{
+    margin-bottom: 330px;
+  }
+  .header__head{
+    margin-bottom: 30px;
+  }
+  .content-item__title{
+    margin-bottom: 30px;
+  }
+  .header__content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__content-item{
+    text-align: center;
+  }
+  .content-item__text{
+    margin: 0 auto;
+    margin-bottom: 400px;
+  }
+  .content-item__wrap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+  }
+.header__product {
+  position: absolute;
+  width: 450px;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+}
+
+
+@media(max-width: 768px) {
+  .header{
+    margin-bottom: 230px;
+  }
+  .header__head-item{
+    img{
+      width: 70px;
+    }
+  }
+  .head-item__phone {
+    @include middleText($fs: 16px);
+    color: $redText;
+}
+.head-item__btn {
+  @include buttonCall($fs:14px);
+}
+.content-item__title{
+  font-family: 'Pridi-Bold', sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+}
+.content-item__text{
+  @include standartText($fs: 14px, $clr:$whiteText);
+}
+.header__product {
+  position: absolute;
+  width: 350px;
+  bottom: 10%;
+}
+.item__inner-title {
+  @include middleText($fs: 20px, $clr:$darkText);
+}
+.item__inner-subtitle{
+  @include standartText($fontFm: 'OpenSans-Regular', $fs: 16px, $lh: 25px);
+}
+.box__item-title {
+  @include standartText($fontFm: 'OpenSans-Regular', $fs: 14px, $lh: 25px);
+  margin-bottom: 5px;
+}
+.box__item-price {
+  @include middleText($fontFm: 'OpenSans-Bold', $fs: 28px, $clr:$darkText)
+}
+.content-item__inner{
+  padding: 15px 20px;
+}
+.form__btn {
+  @include button($pdd:20px 40px, $bradius: 30px, $clr: $whiteText, $fontFm: 'OpenSans-Bold', $fs: 14px);
+}
+.holder-box__item{
+  flex: 0 0 50%;
+}
+}
+
+
+@media(max-width: 540px) {
+  .header{
+    .head-item__phone{
+      display: none;
+    }
+  }
+  .head-item__btn {
+    @include buttonCall($pdd:12px 15px);
+  }
+  .header__product {
+    position: absolute;
+    width: 300px;
+    bottom: 12%;
+  }
+  .content-item__inner{
+    padding: 15px 20px;
+  }
+  .content-item__wrap{
+    width: 280px;
+  }
+  .form__btn {
+  @include button($pdd:12px 15px, $bradius: 30px, $clr: $whiteText, $fontFm: 'OpenSans-Bold', $fs: 14px);
+}
+.item__inner-subtitle{
+  @include standartText($fontFm: 'OpenSans-Regular', $fs: 14px, $lh: 25px);
+}
+.box__item-title {
+  @include standartText($fontFm: 'OpenSans-Regular', $fs: 12px, $lh: 25px);
+  margin-bottom: 5px;
+}
+.box__item-price {
+  @include middleText($fontFm: 'OpenSans-Bold', $fs: 28px, $clr:$darkText)
+}
+.holder-box__item{
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}

@@ -5,22 +5,30 @@
 .certificates {
   @include paddingSections;
 }
-.container {
-}
+
+.container {}
 
 .certificates__inner {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .certificates__item {
   flex: 0 0 30%;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  img{
+
+  img {
     margin-right: 10px;
   }
 }
-.certificates__item-text {
+
+
+//======================== media queries ========================
+@media(max-width: 1200px) {
+  .certificates__inner {
+    justify-content: center;
+  }
 }

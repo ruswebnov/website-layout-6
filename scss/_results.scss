@@ -3,48 +3,53 @@
 @import "mixins";
 
 
-.results{
+.results {
   @include paddingSections;
   position: relative;
-  .holder__box--right{
+
+  .holder__box--right {
     position: absolute;
-    left: -5%;
+    left: 0%;
     width: 50%;
     margin-left: 0;
-    .holder__box-title{
+    border-radius: 0 60px 60px 0;
+
+    .holder__box-title {
       text-align: left;
-      margin-left: 251px;
-      &::before{
+
+      &::before {
         content: none;
       }
-    } 
+    }
   }
-  .holder__title{
+
+  .holder__title {
     margin: 200px 0 70px 0;
   }
 }
 
-.results__inner{
+.results__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   padding: 0 20px;
   margin-bottom: 70px;
 }
-.results__item{
-  img{
+
+.results__item {
+  img {
     margin-bottom: 30px;
   }
 }
 
-.results__item-text{
+.results__item-text {
   @include standartText;
   text-align: center;
 }
 
-.slick-prev{
+.slick-prev {
   position: absolute;
   top: 40%;
   left: -1%;
@@ -57,7 +62,8 @@
   border-radius: 50%;
   box-shadow: $boxShadow;
   outline: none;
-  &::before{
+
+  &::before {
     content: '';
     position: absolute;
     background-image: url(../images/back.svg);
@@ -68,7 +74,8 @@
     left: 17%;
   }
 }
-.slick-next{
+
+.slick-next {
   position: absolute;
   top: 40%;
   right: -1%;
@@ -81,7 +88,8 @@
   border-radius: 50%;
   box-shadow: $boxShadow;
   outline: none;
-  &::before{
+
+  &::before {
     content: '';
     position: absolute;
     background-image: url(../images/next.svg);
@@ -92,14 +100,52 @@
     left: 22%;
   }
 }
+
 .slick-prev:hover,
-.slick-next:hover{
+.slick-next:hover {
   background-color: #D7EBFF;
 }
+
 .slick-prev:active,
-.slick-next:active{
+.slick-next:active {
   background-color: #c2e0ff;
-  &::before{
+
+  &::before {
     top: 15%;
+  }
+}
+
+
+
+//======================== media queries ========================
+@media(max-width: 992px) {
+  .results {
+    padding-top: 120px;
+  }
+}
+
+
+
+@media(max-width: 768px) {
+  .results {
+    padding-top: 60px;
+
+    .holder__box--right {
+      width: 70%;
+    }
+
+    .holder__title {
+      margin: 120px 0 70px 0;
+    }
+  }
+}
+
+
+
+@media(max-width: 544px) {
+  .results {
+    .holder__box--right {
+      width: 100%;
+    }
   }
 }

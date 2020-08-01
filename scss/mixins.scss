@@ -1,4 +1,4 @@
-//для импорта шрифтов
+// //============== для импорта шрифтов ==================
 @import "variables";
 @mixin font($font_name, $file_name, $weight, $style) {
 
@@ -14,9 +14,9 @@
 
 
 
-//миксины для работы 
+//============== миксины для работы ==============
 
- //Миксины для текста 
+ // ==================  Миксины для текста  ==================
 @mixin smallText($fontFm: 'OpenSans-Regular', $fs: 14px, $lh: 18px, $clr:$whiteText) {
   font-family: $fontFm,sans-serif;
   font-size: $fs;
@@ -45,7 +45,7 @@
 
 
 
-//Кнопки
+//  ==================  Кнопки  ==================
 @mixin button($pdd:30px 80px, $bradius: 30px, $clr: $whiteText, $fontFm: 'OpenSans-Bold', $fs: 14px) {
   padding: $pdd;
   background: linear-gradient(101.25deg, #CE0538 10.92%, #4E4777 92.35%), #C4C4C4;
@@ -76,7 +76,7 @@
 }
 
 
-//padding
+//  ==================padding  ==================
 @mixin paddingSections($pdd: 50px 0) {
   padding: $pdd;
 }
